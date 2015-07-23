@@ -10,8 +10,8 @@ open Chessie.ErrorHandling
 type options = {
     [<Option('p', "project", Required = true, HelpText = "Project with sources to merge.")>]
     ProjectName : string
-    [<Option('d', "destdir", HelpText = "Destination directory of merged file.")>]
-    DestinationDir : string
+    [<Option('o', "destfile", HelpText = "Explicit destination name of merged file.")>]
+    OutputFile : string
 }
 
 let inline (|Success|Fail|) (result : ParserResult<'a>) =
@@ -155,12 +155,12 @@ let mergeToFile projectFile destFile =
 let main argv = 
     match Parser.Default.ParseArguments<options>(argv) with
     | Success(opts) ->
-        let destFile = if opts.DestinationDir.Length = 0
+        let destFile = if opts.OutputFile.Length = 0
                        then Path.ChangeExtension(
                                 Path.Combine(
                                     Path.GetDirectoryName(opts.ProjectName),
                                     Path.GetFileNameWithoutExtension(opts.ProjectName)), "cs")
-                       else opts.DestinationDir
+                       else opts.OutputFile
         let result = mergeToFile opts.ProjectName destFile
         Trial.returnOrFail result
     | _ -> 1
