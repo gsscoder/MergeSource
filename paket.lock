@@ -1,0 +1,10 @@
+NUGET
+  remote: https://nuget.org/api/v2
+  specs:
+    CommandLineParser (2.0.99-alpha)
+    FSharp.Collections.ParallelSeq (1.0.2)
+    FSharp.Core (3.1.2.5)
+GITHUB
+  remote: fsprojects/Chessie
+  specs:
+    src/Chessie/ErrorHandling.fs (2e4d76714d6d01ac64913317870f05d7f7ae8e37)

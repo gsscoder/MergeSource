@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MergeSource", "src\MergeSource\MergeSource.fsproj", "{23674B11-C69B-4259-B708-711D6B0E566F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4E373BEC-1A30-49F0-BAF7-EE32F7870839}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{62E6877E-DF91-4D4C-8E24-6F7088BB6B1F}"
+	ProjectSection(SolutionItems) = preProject
+		paket.dependencies = paket.dependencies
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23674B11-C69B-4259-B708-711D6B0E566F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23674B11-C69B-4259-B708-711D6B0E566F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23674B11-C69B-4259-B708-711D6B0E566F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23674B11-C69B-4259-B708-711D6B0E566F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

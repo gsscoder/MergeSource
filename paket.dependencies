@@ -1,0 +1,7 @@
+source https://nuget.org/api/v2
+
+nuget FSharp.Core
+nuget CommandLineParser >= 2.0.99-alpha
+nuget FSharp.Collections.ParallelSeq
+
+github fsprojects/Chessie src/Chessie/ErrorHandling.fs
