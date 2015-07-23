@@ -1,4 +1,4 @@
-﻿module MergeSources
+﻿module MergeSource
 
 open System.IO
 open System
