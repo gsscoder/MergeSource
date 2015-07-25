@@ -4,6 +4,7 @@ src/MergeSource.Tests/bin/*
 src/MergeSource.Tests/obj
 build/*
 packages
+paket-files
 *.suo
 *.userprefs
 *~
