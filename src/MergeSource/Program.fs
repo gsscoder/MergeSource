@@ -1,4 +1,4 @@
-﻿module MergeSource
+﻿module MergeSource.Program
 
 open System.IO
 open System
@@ -128,14 +128,12 @@ let merge projectFile =
         |> PSeq.distinct
         |> PSeq.sort
     let usings = sourceInfos
-                 |> unique (fun s ->
-                            match s with
+                 |> unique (function
                             | Info(_, usings, _, _) -> usings |> PSeq.ofList
                             | _ -> PSeq.empty)
                  |> PSeq.map (fun x -> x.ToString())
     let defines = sourceInfos 
-                  |> unique (fun s ->
-                             match s with
+                  |> unique (function
                              | Info(_, _, defines, _) -> defines |> PSeq.ofList
                              | _ -> PSeq.empty)
                   |> PSeq.map (fun x -> x.ToString())
