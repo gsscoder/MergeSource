@@ -115,7 +115,7 @@ let merge projectFile =
     let readWithoutUsingAndDefine file =
         File.ReadAllLines file
         |> PSeq.ofArray
-        |> PSeq.filter (fun l -> not((startswith(l, "using ") && validUsingStmt l) || startswith(l, "#define ") || startswith(l, "//#define ")))
+        |> PSeq.filter (fun l -> not <| (startswith(l, "using ") && validUsingStmt l) || startswith(l, "#define ") || startswith(l, "//#define "))
     let files = parseProject projectFile
     let sourceInfos =
         files
