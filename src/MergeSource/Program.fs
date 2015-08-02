@@ -39,8 +39,7 @@ let parseProject file =
     |> PSeq.filter (fun l -> contains(l, "Compile"))
     |> PSeq.filter (fun l -> contains(l, "Include"))
     |> PSeq.map parseInclude
-    |> PSeq.filter (function Some(_) -> true | None -> false)
-    |> PSeq.map Option.get
+    |> PSeq.choose id
     |> PSeq.filter (fun l -> not(contains(l, "AssemblyInfo")))
     |> PSeq.map (fun l -> Path.Combine(path,l))
 
