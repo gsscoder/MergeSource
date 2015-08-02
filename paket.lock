@@ -3,7 +3,7 @@ NUGET
   specs:
     CommandLineParser (2.0.99-alpha)
     FSharp.Collections.ParallelSeq (1.0.2)
-    FSharp.Core (3.1.2.5)
+    FSharp.Core (4.0.0.1)
 GITHUB
   remote: fsprojects/Chessie
   specs:
